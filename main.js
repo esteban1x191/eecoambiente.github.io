@@ -78,22 +78,9 @@ observer.observe(texto);
 
 
 
-
-
-
-
-const bg = document.querySelector('.bg');
-const image3 = document.querySelector('.image');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const imageOffsetTop = image3.offsetTop;
-
-  if (scrollY >= imageOffsetTop - 500) {
-    bg.style.transform = 'translateY(100%)'; /* Desplazamiento del fondo */
-    image3.style.opacity = 1; /* Aparición de la imagen */
-  } else {
-    bg.style.transform = 'translateY(0)';
-    image3.style.opacity = 0;
-  }
+const menuBtn = document.querySelector('.hamburguer');
+const mobileMenu = document.querySelector('.mobile-menu');
+mobileMenu.classList.toggle('show');
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('show');
 });
